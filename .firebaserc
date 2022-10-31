@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "home-dashboard-fc8f5": {
+      "hosting": {
+        "home-dashboard": [
+          "home-dashboard-fc8f5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "home-dashboard-fc8f5"
+  }
+}

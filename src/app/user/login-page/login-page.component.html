@@ -1,0 +1,11 @@
+<div *ngIf="!(afAuth.authState | async)">
+  <button appGoogleSignin>
+    Inloggen met google
+  </button>
+</div>
+<div *ngIf="afAuth.authState | async as user">
+  <div>Ingelogd als <strong>{{ user.email }}</strong></div>
+  <button (click)="afAuth.signOut()">
+    Uitloggen
+  </button>
+</div>
