@@ -1,4 +1,20 @@
 <app-shell>
+
   <h1>Hello world</h1>
+  <div *ngIf="auth.user$ | async as user">
+    <h3>Logged in as {{ user.displayName }}</h3>
+    <img src="{{ user.photoURL }}" alt="" width="50px">
+  </div>
+
+  <button (click)="auth.login()">Login met Google</button>
+  <button (click)="auth.logout()">Uitloggen</button>
+
+  <button (click)="auth.getCalendar()">Google kalander</button>
+
+  <div *ngFor="let item of auth.calendarItems">
+    <h3>{{ item.summary }} - {{ item.status }}</h3>
+    <p><em>{{ item.created }}</em></p>
+    <p>{{ item.description }}</p>
+  </div>
   <router-outlet></router-outlet>
 </app-shell>

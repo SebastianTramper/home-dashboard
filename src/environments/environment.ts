@@ -11,7 +11,8 @@ export const environment = {
     storageBucket: "home-dashboard-fc8f5.appspot.com",
     messagingSenderId: "734410476003",
     appId: "1:734410476003:web:ae00d1783029d34a9af8d6",
-    measurementId: "G-SXS9X4L5X6"
+    measurementId: "G-SXS9X4L5X6",
+    clientId: "734410476003-0q8gmb8lefcguq8uvl8e1allo97bhue8.apps.googleusercontent.com"
   }
 };
 

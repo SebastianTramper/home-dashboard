@@ -4,7 +4,7 @@
   </button>
 </div>
 <div *ngIf="afAuth.authState | async as user">
-  <div>Ingelogd als <strong>{{ user.email }}</strong></div>
+  <div></div>
   <button (click)="afAuth.signOut()">
     Uitloggen
   </button>

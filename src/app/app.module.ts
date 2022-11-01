@@ -19,6 +19,7 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { SharedModule } from './shared/shared.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { GoogleApiModule } from 'ng-gapi';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AppComponent,
     HomePageComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +35,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    GoogleApiModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
